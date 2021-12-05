@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 mx-auto">
+        <div class="md-form">
+          <input
+            type="text"
+            [(ngModel)]="searchText"
+            class="form-control"
+            id="search"
+            mdbInput
+          />
+          <label for="search">Search</label>
+        </div>
+      </div>
+    </div>
+    <table mdbTable class="z-depth-1">
+      <thead>
+        <tr>
+          <th
+            *ngFor="let head of headElements; let i = index"
+            scope="col"
+          >
+            {{head}}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let el of elements; let i = index">
+          <th scope="row">{{el.make}}</th>
+          <td>{{el.model}}</td>
+          <td>{{el.year}}</td>
+          <td>{{el.oid}}</td>
+          <td>
+            <button class="delete-button" (click)="onDelete(el.oid)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md- mx-auto">
+        <div class="md-form">
+          <input
+            type="text"
+            class="form-control"
+            id="make"
+            [(ngModel)]="vehicleMake"
+            mdbInput
+            required
+          />
+          <label for="make">Make*</label>
+        </div>
+        <div class="md-form">
+            <input
+              type="text"
+              class="form-control"
+              id="model"
+              [(ngModel)]="vehicleModel"
+              mdbInput
+              required
+            />
+            <label for="model">Model*</label>
+          </div>
+          <div class="md-form">
+            <input
+              type="number"
+              step="1"
+              class="form-control"
+              id="year"
+              [(ngModel)]="vehicleYear"
+              mdbInput
+              required
+            />
+            <label for="year">Year*</label>
+          </div>
+          <div class="md-form">
+            <input
+              type="text"
+              class="form-control"
+              id="oid"
+              [(ngModel)]="vehicleOID"
+              mdbInput
+            />
+            <label for="oid">OID*</label>
+          </div>
+          <div class="md-form">
+              <span *ngIf="errorMsg" class="create-failure">OID is not unique</span>
+              <span *ngIf="successMsg" class="create-success">Entry created</span>
+          </div>
+          <button 
+            class="create-button" 
+            [disabled]="!isValid()" 
+            (click)="onSubmit()"
+            [ngClass]="{'not-valid': !isValid()}">Submit
+          </button>
+      </div>
+    </div>
+  </div>
