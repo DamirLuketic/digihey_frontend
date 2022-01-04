@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CreateComponent } from './core/components/create/create.component';
-import { ListComponent } from './core/components/list/list.component';
+import { CreateComponent } from './modules/core/components/create/create.component';
+import { ListComponent } from './modules/core/components/list/list.component';
 
 // Possible optimization: Handle routes through components routing
 const routes: Routes = [
