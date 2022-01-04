@@ -27,7 +27,7 @@ export class CreateComponent implements OnInit {
   }
 
   isValid() {
-    if (this.vehicleMake != '' && this.vehicleModel != '' && this.vehicleOID != '' && this.vehicleYear != null) {
+    if (this.vehicleMake !== '' && this.vehicleModel !== '' && this.vehicleOID !== '' && this.vehicleYear !== null) {
       return true
     }
     return false
